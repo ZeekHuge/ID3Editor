@@ -1,0 +1,54 @@
+//*************************************************************
+//
+//	This code is written by ZeekHuge, as an exercise to understand
+//	and learn about the de facto mp3 file metadata standard i.e. ID3
+//
+//	This program have been throughly tested for 
+//	ID3v3.0, though it is not able to read all 
+//	the frames but only some important data frames.
+//	
+//	The program can also edit these frames.
+//	
+//	Limitaions: 
+//				1.Files with Extended header are not supported
+//				2.Frames with compressed or encrypted data will be skipped
+//				3.Comments in english (eng) language are only supported
+//				4.Only UTF-16 and ISO-8859-1 encodings are supported 
+//
+//	Supported readable frames are :
+//					1. AENC - Audio Encryption 			2. UFID - Unique file Identifier
+//					3. COMM - Comments				4. TIT2 - Title
+//					5. TPE1 - Lead Singer				6. TPE2 - Band
+//					7. TALB - Album-Movie 			8. TCOM - Composer
+//					9. TIT3 - Subtitle-Description			10.TIME - Time
+//					11.TIT1 - Content 				12.TLEN - Lenth
+//					13.TOPE - Original artist 			14.TYER - Year
+//					15.TSIZ - Size
+//
+//	Supported editable frames are :
+//					All the above except AENC, UFIP, COMM, TIME and TYER 
+//
+//
+//
+//	To compile the program :
+//							Use gcc compiler (recommended) to compile this source
+//							code (source file - src/editor.c)
+//							place the executable file in the parent directory (i.e. ID3Editor)
+//
+//	Example : HOME/ID3Editor:$ gcc src/editor.c -o Editor
+//
+//
+//
+//
+// 	To Start the program : run the Editor command on your terminal/CMD with the file 
+//							parameter
+//	
+//	Example: Editor fileToEdit.mp3 (WINDOWS)
+//	Example: ./Editor fileToEdit.mp3 (LINUX) 
+//
+//
+//	The file, this program was originally tested on are placed in folder "testedFiles".
+//	The file otherFiles/id3Editor.log is a log file for debugging process.
+//
+//******************************************************************
+
