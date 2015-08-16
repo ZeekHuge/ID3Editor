@@ -15,7 +15,7 @@
 //				3.Comments in english (eng) language are only supported
 //				4.Only UTF-16 and ISO-8859-1 encodings are supported 
 //
-//	Supported frames are :
+//	Supported readable frames are :
 //					1. AENC - Audio Encryption 			2. UFID - Unique file Identifier
 //					3. COMM - Comments					4. TIT2 - Title
 //					5. TPE1 - Lead Singer				6. TPE2 - Band
@@ -25,23 +25,34 @@
 //					13.TOPE - Original artist 			14.TYER - Year
 //					15.TSIZ - Size
 //
+//	Supported editable frames are :
+//					All the above except AENC, UFIP, COMM, TIME and TYER 
 //
 //
 //
 //	To compile the program :
 //							Use gcc compiler (recommended) to compile this source
-//							code (source file - editor.c)
+//							code (source file - src/editor.c)
+//							place the executable file in the parent directory (i.e. ID3Editor)
 //
-//	Example : gcc editor.c -o Editor
+//	Example : HOME/ID3Editor:$ gcc src/editor.c -o Editor
 //
 //
 //
 //
-// 	To Start the program : run the Editor command n your terminal/CMD with the file 
+// 	To Start the program : run the Editor command on your terminal/CMD with the file 
 //							parameter
 //	
 //	Example: Editor fileToEdit.mp3 (WINDOWS)
 //	Example: ./Editor fileToEdit.mp3 (LINUX) 
+//
+//	The file, this program was originally tested on are placed in folder "testedFiles".
+//	The file otherFiles/id3Editor.log is a log file for debugging process.
+//
+//
+//	Online Sources that helped:
+//	http://id3.org/id3v2.3.0
+//	http://id3.org/id3v2.3.0
 //
 //
 //******************************************************************
